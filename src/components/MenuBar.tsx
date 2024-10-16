@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Search, Grid2X2, User } from 'lucide-react';
+import { Compass, Search, Grid2X2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const MenuBar = () => {
@@ -14,9 +14,6 @@ const MenuBar = () => {
         </Button>
         <Button variant="ghost" size="icon">
           <Grid2X2 className="h-6 w-6" />
-        </Button>
-        <Button variant="ghost" size="icon">
-          <User className="h-6 w-6" />
         </Button>
       </div>
     </nav>
