@@ -20,7 +20,7 @@ const ChatInterface = () => {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto bg-[#F4F4F4] shadow-none">
+    <Card className="max-w-2xl mx-auto bg-[#F4F4F4] shadow-none rounded-[24px] overflow-hidden">
       <div className="h-[500px] overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
           <div key={index} className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
@@ -30,14 +30,14 @@ const ChatInterface = () => {
           </div>
         ))}
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <div className="relative">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="What are you interested in?"
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-            className="w-full pr-10 focus:ring-[#1D3AF1] focus:border-[#1D3AF1] focus:ring-2 focus:outline-none shadow-[0_2px_12px_rgba(39,39,39,0.2)]"
+            className="w-full pr-10 rounded-[12px] focus:ring-[#1D3AF1] focus:border-[#1D3AF1] focus:ring-2 focus:outline-none shadow-[0_2px_12px_rgba(39,39,39,0.2)]"
           />
           <Button
             onClick={handleSend}
