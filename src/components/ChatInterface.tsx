@@ -20,8 +20,8 @@ const ChatInterface = () => {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto bg-white shadow-none">
-      <div className="h-[500px] overflow-y-auto p-4 space-y-4 bg-[#F4F4F4]">
+    <Card className="max-w-2xl mx-auto bg-[#F4F4F4] shadow-none">
+      <div className="h-[500px] overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
           <div key={index} className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[70%] p-3 rounded-lg ${message.isUser ? 'bg-blue-500 text-white' : 'bg-white text-gray-800'}`}>
@@ -30,7 +30,7 @@ const ChatInterface = () => {
           </div>
         ))}
       </div>
-      <div className="p-4 bg-white">
+      <div className="p-4">
         <div className="relative">
           <Input
             value={input}
